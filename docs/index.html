@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="aura-container">
+        <div class="aura aura-1"></div>
+        <div class="aura aura-2"></div>
+        <div class="aura aura-3"></div>
+    </div>
+    
+    <div class="cursor-main"></div>
+    <div class="cursor-trail"></div>
+
+    <div class="decorative-dots"></div>
+
+    <!-- Modal Container -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-container">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div class="modal-content" id="modalContent">
+                <!-- Contenuto dinamico -->
+            </div>
+        </div>
+    </div>
+
+    <!-- About Modal -->
+    <div class="modal-overlay" id="aboutModalOverlay">
+        <div class="modal-container about-modal-container">
+            <button class="modal-close" id="aboutModalClose">&times;</button>
+            <div class="modal-content about-modal-content">
+                <div class="about-header">
+                    <div class="about-image-wrapper">
+                        <img src="immagini/io.jpg" alt="Angelica Frijio" class="about-image">
+                    </div>
+                    <h3 class="modal-title">Angelica Frijio</h3>
+                    <div class="modal-divider"></div>
+                </div>
+                <div class="about-body">
+                    <p class="modal-description">
+                        Ciao! Sono una studentessa di informatica con la passione per lo sviluppo software e il web design. 
+                        Amo trasformare idee in progetti concreti, unendo creatività e logica per creare esperienze digitali 
+                        intuitive ed eleganti. Nel mio percorso di studi ho esplorato diversi linguaggi di programmazione 
+                        e strumenti di sviluppo, coltivando una particolare attenzione per i dettagli e l'esperienza utente.
+                    </p>
+                    <p class="modal-description">
+                        Quando non sono immersa nel codice, mi piace scoprire nuove tecnologie, partecipare a progetti 
+                        collaborativi e continuare ad ampliare le mie competenze. Credo che l'apprendimento continuo 
+                        sia la chiave per crescere in questo settore in continua evoluzione.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="hero fade-in">
+        <div class="hero-content">
+            <span class="welcome-badge">benvenuti</span>
+            <h1 class="coquette-title">Il mio Portfolio</h1>
+            <div class="title-decoration">
+                <span class="line"></span>
+                <span class="bow">⋆˚࿔</span>
+                <span class="line"></span>
+            </div>
+            <h2>Angelica Frijio</h2>
+            <p class="hero-subtitle">Studentessa di informatica appassionata di codifica e sviluppo software.</p>
+            <div class="scroll-indicator">
+                <span class="scroll-text">scopri di più</span>
+                <div class="scroll-arrow">↓</div>
+            </div>
+            <button class="about-me-btn" id="aboutMeBtn">
+                <span class="about-btn-icon">✧</span>
+                about me
+                <span class="about-btn-icon">✧</span>
+            </button>
+        </div>
+    </header>
+
+    
+
+    <main>
+        <section id="competenze" class="fade-in">
+            <div class="section-header">
+                <h2 class="coquette-title">Skillset</h2>
+                <p class="section-description">strumenti che amo utilizzare</p>
+            </div>
+            <div class="skills-container">
+                <span class="skill-badge" data-icon="C++">C++</span>
+                <span class="skill-badge" data-icon="Java">Java</span>
+                <span class="skill-badge" data-icon="DHTML" data-icon="css">Web Design</span>
+            </div>
+        </section>
+
+        <section id="progetti">
+            <div class="section-header fade-in">
+                <h2 class="coquette-title">I Miei Progetti</h2>
+                <p class="section-description">un percorso in divenire</p>
+            </div>
+            
+            <div class="year-section fade-in">
+                <div class="year-header">
+                    <span class="year-icon">III</span>
+                    <h3 class="year-title">Anno Terzo</h3>
+                </div>
+                <div class="card-container">
+                    <div class="project-card" data-project="pcto1">
+                        <div class="card-ribbon"></div>
+                        <div class="project-image">
+                            <img src="immagini/pcto1.png" alt="Gameboy">
+                            <div class="image-overlay"></div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-tag">Formazione</span>
+                            <h4>UST: Introduzione al PCTO</h4>
+                            <p>Un quadro completo su normative, diritti e doveri dello studente in stage.</p>
+                            <div class="card-footer">
+                                <span class="detail-link" data-project="pcto1">esplora →</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card" data-project="sicurezza">
+                        <div class="card-ribbon"></div>
+                        <div class="project-image">
+                            <img src="immagini/sicurezza.jpg" alt="Interfaccia">
+                            <div class="image-overlay"></div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-tag">Sicurezza</span>
+                            <h4>Prevenzione e Tutela negli Ambienti Professionali</h4>
+                            <p>Incontro formativo dedicato alla revisione dei concetti fondamentali sulla sicurezza nei luoghi di lavoro.</p>
+                            <div class="card-footer">
+                                <span class="detail-link" data-project="sicurezza">esplora →</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card" data-project="pcto">
+                        <div class="card-ribbon"></div>
+                        <div class="project-image">
+                            <img src="immagini/pcto2.jpg" alt="Insegnante">
+                            <div class="image-overlay"></div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-tag">PCTO</span>
+                            <h4>BusConnect</h4>
+                            <p>Percorso formativo sulla sicurezza online dedicato a persone con disabilità cognitive.</p>
+                            <div class="card-footer">
+                                <span class="detail-link" data-project="pcto">esplora →</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card" data-project="ms">
+                        <div class="card-ribbon"></div>
+                        <div class="project-image">
+                            <img src="immagini/ms.jpg" alt="Hardware">
+                            <div class="image-overlay"></div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-tag">Hardware</span>
+                            <h4>Monta&Smonta</h4>
+                            <p>Esperienza pratica di smontaggio e rimontaggio completo di un computer desktop. </p>
+                            <div class="card-footer">
+                                <span class="detail-link" data-project="ms">esplora →</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="year-section fade-in">
+                <div class="year-header">
+                    <span class="year-icon">IV</span>
+                    <h3 class="year-title">Anno Quarto</h3>
+                </div>
+                <div class="card-container">
+                    <div class="project-card" data-project="confindustria">
+                        <div class="card-ribbon"></div>
+                        <div class="project-image">
+                            <img src="immagini/conf.jpg" alt="confindustria">
+                            <div class="image-overlay"></div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-tag">Soft Skills</span>
+                            <h4>Confindustria – Mi Presento</h4>
+                            <p>Attività formativa condotta da esperti di Confindustria focalizzata sull'orientamento al mondo del lavoro.</p>
+                            <div class="card-footer">
+                                <span class="detail-link" data-project="tepsit">esplora →</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card" data-project="na">
+                        <div class="card-ribbon"></div>
+                        <div class="project-image">
+                            <img src="immagini/cna.jpg" alt="CNA">
+                            <div class="image-overlay"></div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-tag">Business Logic</span>
+                            <h4>CNA – Tecnopolo di Reggio Emilia</h4>
+                            <p>Attività formativa svolta presso il Tecnopolo di Reggio Emilia, dedicata all'analisi del funzionamento delle realtà aziendali e delle principali forme contrattuali.</p>
+                            <div class="card-footer">
+                                <span class="detail-link" data-project="na">esplora →</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card" data-project="polarity">
+                        <div class="card-ribbon"></div>
+                        <div class="project-image">
+                            <img src="immagini/polarity.jpg" alt="Polarity">
+                            <div class="image-overlay"></div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-tag">Orientamento IT</span>
+                            <h4>Polarity</h4>
+                            <p>Incontro con i professionisti dell'azienda informatica Polarity, che hanno illustrato la loro realtà lavorativa, i servizi offerti e le opportunità del settore tecnologico.</p>
+                            <div class="card-footer">
+                                <span class="detail-link" data-project="polarity">esplora →</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card" data-project="ascolto">
+                        <div class="card-ribbon"></div>
+                        <div class="project-image">
+                            <img src="immagini/pj.jpg" alt="ProjectWork">
+                            <div class="image-overlay"></div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-tag">Project Management</span>
+                            <h4>Ascolto Project Work</h4>
+                            <p>Sessione di orientamento dedicata alla presentazione dei project work sviluppati dagli studenti delle classi quinte.</p>
+                            <div class="card-footer">
+                                <span class="detail-link" data-project="ascolto">esplora →</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="year-section fade-in">
+                <div class="year-header">
+                    <span class="year-icon">V</span>
+                    <h3 class="year-title">Anno Quinto</h3>
+                </div>
+                
+            </div>
+        </section>
+    </main>
+
+    <footer class="fade-in">
+        <div class="footer-content">
+            <span class="footer-symbol">⋆</span>
+            <p>angelica.frijio@outlook.com</p>
+            <span class="footer-symbol">⋆</span>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
