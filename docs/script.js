@@ -8,6 +8,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const modalOverlay = document.getElementById('modalOverlay');
     const modalContent = document.getElementById('modalContent');
     const modalClose = document.getElementById('modalClose');
+    const aboutModalOverlay = document.getElementById('aboutModalOverlay');
+    const aboutModalClose = document.getElementById('aboutModalClose');
+    const aboutMeBtn = document.getElementById('aboutMeBtn');
     
     let mouseX = window.innerWidth / 2;
     let mouseY = window.innerHeight / 2;
@@ -165,7 +168,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // Elementi interattivi per hover cursore
-    const interactiveElements = document.querySelectorAll('.project-card, .skill-badge, .detail-link, .scroll-indicator, .welcome-badge, .modal-close');
+    const interactiveElements = document.querySelectorAll('.project-card, .skill-badge, .detail-link, .scroll-indicator, .welcome-badge, .modal-close, .about-me-btn');
     
     interactiveElements.forEach(el => {
         el.addEventListener('mouseenter', () => {
@@ -220,6 +223,18 @@ document.addEventListener("DOMContentLoaded", () => {
         modalOverlay.classList.remove('active');
         document.body.style.overflow = '';
     }
+
+    // Apri about modal
+    function openAboutModal() {
+        aboutModalOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    // Chiudi about modal
+    function closeAboutModal() {
+        aboutModalOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+    }
     
     // Event listeners per aprire modal
     document.querySelectorAll('[data-project]').forEach(card => {
@@ -255,6 +270,18 @@ document.addEventListener("DOMContentLoaded", () => {
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && modalOverlay.classList.contains('active')) {
             closeModal();
+        }
+        if (e.key === 'Escape' && aboutModalOverlay.classList.contains('active')) {
+            closeAboutModal();
+        }
+    });
+
+    // About modal events
+    aboutMeBtn.addEventListener('click', openAboutModal);
+    aboutModalClose.addEventListener('click', closeAboutModal);
+    aboutModalOverlay.addEventListener('click', (e) => {
+        if (e.target === aboutModalOverlay) {
+            closeAboutModal();
         }
     });
     
